@@ -1,1 +1,49 @@
-<p>insert works!</p>
+<body>
+    <div class="insertmaindiv">
+        <h1>Insert the Customer Details Here</h1>
+        <br>
+        <br>
+        <br>
+        <div class="inserttable">
+            <form #register="ngForm" (ngSubmit)="registercustomer()">
+                <table>
+                    <tr>
+                        <th>Enter Customer Email</th>
+                        <th>
+                            <input type="email" name="cusemail" [(ngModel)]="bankclsobj.emailid" #cusemail="ngModel" required>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th><span *ngIf="cusemail.invalid && cusemail.touched">Enter the email id</span></th>
+                    </tr>
+                    <tr>
+                        <th>Enter the Customer Name</th>
+                        <th><input type="text" name="custname" [(ngModel)]="bankclsobj.customername" #custname="ngModel" required></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th><span *ngIf="custname.invalid && custname.touched">Enter the customername</span></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                        </th>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <th><input [disabled]="register.invalid"  type="submit"></th>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    
+    </div>
+   
+    
+</body>
+

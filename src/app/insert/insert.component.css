@@ -1,0 +1,17 @@
+.insertmaindiv{
+
+    width: 100%;
+    height: auto;
+    background-color: beige;
+}
+
+.insertmaindiv h1{
+
+    width: 500px;
+    margin: auto;
+}
+
+span{
+    color: red;
+    font-weight: bold;
+}

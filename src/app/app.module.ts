@@ -8,6 +8,9 @@ import { InsertComponent } from './insert/insert.component';
 import { ViewComponent } from './view/view.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
+import { BankserviceService } from './bankservice.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,13 @@ import { DeleteComponent } from './delete/delete.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+    
+    
   ],
-  providers: [],
+  providers: [BankserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
